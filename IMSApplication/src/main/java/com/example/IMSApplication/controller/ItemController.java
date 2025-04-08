@@ -29,6 +29,11 @@ public class ItemController {
         return itemService.findByEmail(email);
     }
 
+    @DeleteMapping("/{id}")
+    public void deleteItem(@PathVariable long id){
+        itemService.deleteItem(id);
+    }
+
     @GetMapping
     public List<Item> getAllItems(){
         return itemService.getAllItems();
